@@ -17,6 +17,6 @@ for analyzing high-throughput  data in genomics  and other omics fields.
 ```
 # Copy and paste in R session.
 if (require("remotes") == FALSE) install.packages("remotes")
-install_github("eclipsebio/eCV.git")
+install_github("eclipsebio/eCV")
 library("eCV")
 ```
