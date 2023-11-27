@@ -50,8 +50,8 @@
 #' out$sim_data %>% as.data.frame() %>% 
 #' mutate(`Features group` = as.character(out$sim_params$feature_group)) %>%
 #' ggplot(aes(x=`Rep 1`,y=`Rep 2`,color=`Features group`)) +
-#'  geom_point(size=1) + 
-#'  scale_color_manual(values = c("#009CA6", "#D5DADD")) + 
+#'  geom_point(size=1, alpha=0.5) + 
+#'  scale_color_manual(values = c( "#009CA6" , "#F4364C")) + 
 #'  theme_classic()
 #' }
 simulate_data <- function(n_reps = 2,

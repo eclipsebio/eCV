@@ -11,43 +11,43 @@ mIDR(x, mu, sigma, rho, p, eps = 0.001, max.ite = 20, n_threads = 1)
 and columns representing the number of sample replicates. The numeric values
 should be positive and represent significance (not necessarily p-values).}
 
-\item{mu}{Starting value for the mean of the reproducible component 
+\item{mu}{Starting value for the mean of the reproducible component
 Numeric.}
 
 \item{sigma}{Starting value for the standard deviation of the reproducible
 component Numeric.}
 
-\item{rho}{Starting value for the correlation coefficient of the 
+\item{rho}{Starting value for the correlation coefficient of the
 reproducible component Numeric.}
 
-\item{p}{Starting value for the proportion of the reproducible component 
+\item{p}{Starting value for the proportion of the reproducible component
 Numeric.}
 
-\item{eps}{Stopping criterion. Iterations stop when the increment of the 
-log-likelihood is less than "eps" times the log-likelihood. 
+\item{eps}{Stopping criterion. Iterations stop when the increment of the
+log-likelihood is less than "eps" times the log-likelihood.
 Defaults to 0.001.}
 
 \item{max.ite}{Maximum number of iterations. The default is 30.}
 
-\item{n_threads}{Number of threads for parallel computing. Numeric. Defaults 
+\item{n_threads}{Number of threads for parallel computing. Numeric. Defaults
 to 1.}
 }
 \value{
 Returns a list of two elements:
 \describe{
-  \item{\strong{idr}}{A numeric vector of the local meta IDR 
+  \item{\strong{idr}}{A numeric vector of the local meta IDR
   for each observation.}
   \item{\strong{IDR}}{A numerical vector of the expected meta IDR
-   for observations that are as irreproducible or more 
+   for observations that are as irreproducible or more
    irreproducible than the given observations.}
 }
 }
 \description{
-This function extends the Li et al. (2011) copula mixture model, originally 
+This function extends the Li et al. (2011) copula mixture model, originally
 implemented  in  idr::est.IDR,  to  accommodate  any number  of  replicates.
 It  computes  the  local  IDR  for all  pairwise combinations of replicates.
-Then it computes a "meta" local IDR score using the formula: 
-                           1 - (1 - idr)^C(r,2), 
+Then it computes a "meta" local IDR score using the formula:
+                    1 - (1 - idr_1)*...*(1 - idr_C(r,2)),
 where C(r,2) represents the number of all pairwise combinations of scores.
 Once the meta local IDR is obtained, the expected IDR scores are obtained
 in the same way as in the traditional IDR procedure.
@@ -69,13 +69,14 @@ p <- 0.7
 midr_out <- mIDR(x = out$sim_data, mu, sigma, rho, p)
 \dontrun{
 library(tidyverse)
-out$sim_data \%>\% as.data.frame() \%>\% 
-mutate(`Meta idr` = midr_out$idr) \%>\%
-ggplot(aes(x = `Rep 1`, y = `Rep 2`,color = `Meta idr`)) +
- geom_point(size = 1) + 
- scale_color_gradient(low = "#009CA6", high = "#D5DADD") + 
- theme_classic()
- }
+out$sim_data \%>\%
+  as.data.frame() \%>\%
+  mutate(`Meta idr` = midr_out$idr) \%>\%
+  ggplot(aes(x = `Rep 1`, y = `Rep 2`, color = `Meta idr`)) +
+  geom_point(size = 1) +
+ scale_color_gradientn(colors=c("#F4364C", "#D5DADD", "#009CA6" ))+ 
+  theme_classic()
+}
 }
 \references{
 Q. Li, J. B. Brown, H. Huang, and P. J. Bickel. (2011)

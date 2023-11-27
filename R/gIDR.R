@@ -76,7 +76,7 @@
 #' mutate(idr = gidr.out$idr) %>%
 #' ggplot(aes(x=`Rep 1`,y=`Rep 2`,color=idr)) +
 #'  geom_point(size=1) + 
-#'  scale_color_gradient(low = "#009CA6", high = "#D5DADD") + 
+#'  scale_color_gradientn(colors=c("#F4364C", "#D5DADD", "#009CA6" ))+ 
 #'  theme_classic()
 #' 
 #' #2. Show gIDR for n=10.
@@ -87,7 +87,7 @@
 #' mutate(idr = gidr.out$IDR) %>%
 #' ggplot(aes(x = `Rep 1`, y = `Rep 2`, color = idr)) +
 #'  geom_point(size = 1) + 
-#'  scale_color_gradient(low = "#009CA6", high = "#D5DADD") + 
+#'  scale_color_gradientn(colors=c("#F4364C", "#D5DADD", "#009CA6" ))+ 
 #'  theme_classic()
 #'}
 

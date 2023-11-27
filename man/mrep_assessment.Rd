@@ -86,12 +86,11 @@ for (method in c("eCV", "gIDR", "mIDR")) {
 
 # Plot results
 results \%>\% 
-mutate(group = ifelse(group == 1, "TRUE","FALSE")) \%>\%
+mutate(group = ifelse(group == 1,"FALSE","TRUE")) \%>\%
 ggplot(aes(x=Method, y = value,fill=group)) + 
-scale_fill_manual(values = c("#009CA6", "#D5DADD")) + 
+scale_fill_manual(values = c( "#009CA6" , "#F4364C")) + 
 geom_boxplot() + 
 theme_classic() + 
-labs(y="Reproducibility assessment",
-fill="Reproducible\nfeature")
+labs(y="Reproducibility assessment", fill="Reproducible\nfeature")
 }
 }

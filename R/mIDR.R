@@ -64,7 +64,7 @@
 #'   mutate(`Meta idr` = midr_out$idr) %>%
 #'   ggplot(aes(x = `Rep 1`, y = `Rep 2`, color = `Meta idr`)) +
 #'   geom_point(size = 1) +
-#'   scale_color_gradient(low = "#009CA6", high = "#D5DADD") +
+#'  scale_color_gradientn(colors=c("#F4364C", "#D5DADD", "#009CA6" ))+ 
 #'   theme_classic()
 #' }
 mIDR <-

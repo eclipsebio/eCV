@@ -1,6 +1,14 @@
 ---
 title: "Introduction to the eCV package"
-output: rmarkdown::html_vignette
+output:
+  html_document:
+    code_folding: hide
+    collapsed: no
+    df_print: paged
+    toc: yes
+    toc_depth: 3
+editor_options: 
+  chunk_output_type: inline
 bibliography: reference.bib
 vignette: >
   %\VignetteIndexEntry{Introduction to the eCV package}
@@ -8,14 +16,16 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(ollapse = TRUE, comment = NA)
-```
-
 <img align="right" style="margin-left: 1px; margin-bottom: 1px; margin-right: 1px; margin-top: 0px" src="../inst/images/eCV_logo.png" width="115" height="115"/>
 
 
-# Introduction
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE,
+                      comment = NA)
+```
+
+
+# Wellcome!
 
 Thanks for using package eCV! This vignette provides a high-level introduction to the functionality and usage of eCV and related functions.
 
@@ -25,7 +35,7 @@ To install the development version from GitHub, please do
 
 ```{r, eval = FALSE}
 # install.packages("remotes")
-remotes::install_github("eclipsebio/eCV.git")
+remotes::install_github("eclipsebio/eCV")
 ```
 
 # Load package eCV.
@@ -33,7 +43,7 @@ remotes::install_github("eclipsebio/eCV.git")
 Once installed, you can load the package eCV using `library`.
 
 ```{r, results='hide'}
-library(eCV)
+library("eCV")
 ```
 
 # Usage examples.
@@ -57,12 +67,11 @@ Here is an example that simulates 1,000 features across four replicates accordin
 ```{r}
 set.seed(42)
 out <- simulate_data(scenario = 1, n_reps = 4, n_features = 1000)
-out$sim_data %>%
-  as.data.frame() %>%
-  mutate(`Features group` = as.character(out$sim_params$feature_group)) %>%
-  ggplot(aes(x = `Rep 1`, y = `Rep 2`, color = `Features group`)) +
-  geom_point(size = 1) +
-  scale_color_manual(values = c("#009CA6", "#D5DADD")) +
+out$sim_data %>% as.data.frame() %>% 
+ mutate(`Features group` = as.character(out$sim_params$feature_group)) %>%
+ ggplot(aes(x=`Rep 1`,y=`Rep 2`,color=`Features group`)) +
+  geom_point(size=1, alpha=0.5) + 
+  scale_color_manual(values = c( "#009CA6" , "#F4364C")) + 
   theme_classic()
 ```
 
@@ -143,16 +152,13 @@ for (method in c("eCV", "gIDR", "mIDR")) {
 }
 
 # Plot results
-results %>%
-  mutate(group = ifelse(group == 1, "FALSE", "TRUE")) %>%
-  ggplot(aes(x = Method, y = value, fill = group)) +
-  scale_fill_manual(values = c("#009CA6", "#D5DADD")) +
-  geom_boxplot() +
-  theme_classic() +
-  labs(
-    y = "Reproducibility assessment",
-    fill = "Reproducible\nfeature"
-  )
+ results %>% 
+ mutate(group = ifelse(group == 1,"FALSE","TRUE")) %>%
+ ggplot(aes(x=Method, y = value,fill=group)) + 
+ scale_fill_manual(values = c( "#009CA6" , "#F4364C")) + 
+ geom_boxplot() + 
+ theme_classic() + 
+ labs(y="Reproducibility assessment", fill="Reproducible\nfeature")
 ```
 
 # References.

@@ -61,7 +61,7 @@ as.data.frame() \%>\%
 mutate(`eCV Prob` = ecv_out$post_prob) \%>\%
 ggplot(aes(x = `Rep 1`, y = `Rep 2`, color = `eCV Prob`)) +
  geom_point(size = 1) + 
- scale_color_gradient(low = "#009CA6", high = "#D5DADD") + 
+ scale_color_gradientn(colors=c( "#009CA6", "#D5DADD", "#F4364C"))+ 
  theme_classic()
  }
 }
