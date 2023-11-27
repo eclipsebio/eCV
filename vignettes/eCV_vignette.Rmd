@@ -25,11 +25,11 @@ knitr::opts_chunk$set(collapse = TRUE,
 ```
 
 
-# Wellcome!
+# Welcome!
 
 Thanks for using package eCV! This vignette provides a high-level introduction to the functionality and usage of eCV and related functions.
 
-# Installation.
+# Installation
 
 To install the development version from GitHub, please do
 
@@ -38,7 +38,7 @@ To install the development version from GitHub, please do
 remotes::install_github("eclipsebio/eCV")
 ```
 
-# Load package eCV.
+# Load package eCV
 
 Once installed, you can load the package eCV using `library`.
 
@@ -46,7 +46,7 @@ Once installed, you can load the package eCV using `library`.
 library("eCV")
 ```
 
-# Usage examples.
+# Usage examples
 
 The following examples assume you have installed and loaded package `tidyverse`.
 
@@ -54,7 +54,7 @@ The following examples assume you have installed and loaded package `tidyverse`.
 library("tidyverse")
 ```
 
-## Simulate data: function `simulate_data`.
+## Simulate data: function `simulate_data`
 
 The `simulate_data` function simulates omic features, specifically designed to mimic reproducible and irreproducible groups. Building upon the copula mixture model simulations introduced in the original publication @li_measuring_2011. This function produces samples of paired omic features for a specified number of replicates. The reproducibility state of each feature is determined by a binomial variable, where the mixing probabilities between two multivariate normal distributions are controlled by a vector of probabilities.
 
@@ -75,7 +75,7 @@ out$sim_data %>% as.data.frame() %>%
   theme_classic()
 ```
 
-## Assessing feature reproducibility with different methods: function `mrep_assessment`.
+## Assessing feature reproducibility with different methods: function `mrep_assessment`
 
 The `mrep_assessment` function is a comprehensive tool within the package eCV for
 evaluating the reproducibility of omic feature values across multiple sample replicates.
@@ -161,6 +161,6 @@ for (method in c("eCV", "gIDR", "mIDR")) {
  labs(y="Reproducibility assessment", fill="Reproducible\nfeature")
 ```
 
-# References.
+# References
 
 <div id="refs"></div>
