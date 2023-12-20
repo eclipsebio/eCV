@@ -13,7 +13,7 @@ for analyzing high-throughput  data in genomics  and other omics fields.
 
 ## [Article](https://www.biorxiv.org/content/10.1101/2023.12.18.572208v1)
 
-## [Vignette](https://github.com/eclipsebio/eCV/blob/main/inst/eCV_vignette.html)
+## [Vignette](https://github.com/eclipsebio/eCV/blob/main/inst/eCV_vignette.pdf)
 
 ## Instal developer version.
 
