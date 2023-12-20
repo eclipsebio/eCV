@@ -3,7 +3,6 @@
 # Enhanced Coefficient of Variation and IDR Extensions for Reproducibility Assessment
 
 
-
 This package provides extensions and alternative methods to measure the
 reproducibility  of  omic  data  with an arbitrary number of replicates. 
 It introduces an enhanced Coefficient of Variation (**eCV**)  metric to 
@@ -12,11 +11,21 @@ it offers alternatives to  the  Irreproducible  Discovery Rate (**IDR**)
 calculations for multi-replicate experiments.  These tools are valuable
 for analyzing high-throughput  data in genomics  and other omics fields.
 
-## Installing and loading the package from GitHub
+## [Article](https://www.biorxiv.org/content/10.1101/2023.12.18.572208v1)
+
+## [Vignette](https://github.com/eclipsebio/eCV/blob/main/inst/eCV_vignette.html)
+
+## Instal developer version.
 
 ```
 # Copy and paste in R session.
 if (require("remotes") == FALSE) install.packages("remotes")
 install_github("eclipsebio/eCV")
+```
+
+## Load package in your R session.
+
+```
 library("eCV")
 ```
+

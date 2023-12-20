@@ -9,7 +9,9 @@ Description:
     the likelihood of omic features being reproducible. Additionally, it offers
     alternatives  to  the  Irreproducible  Discovery  Rate  (IDR)  calculations
     for multi-replicate experiments.  These  tools  are  valuable for analyzing
-    high-throughput data in genomics and other omics fields.
+    high-throughput data in genomics and other omics fields <doi:10.1101/2023.12.18.572208>.
+URL: https://github.com/eclipsebio/eCV
+BugReports: https://github.com/eclipsebio/eCV/issues
 License: GPL (>= 3)
 Encoding: UTF-8
 VignetteBuilder: 
