@@ -15,7 +15,7 @@ for analyzing high-throughput  data in genomics  and other omics fields.
 
 ## [Vignette](https://github.com/eclipsebio/eCV/blob/main/inst/eCV_vignette.pdf)
 
-## Instal developer version.
+## Install developer version.
 
 ```
 # Copy and paste in R session.
