@@ -1,17 +1,20 @@
 ---
 title: "Introduction to the eCV package"
 output:
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
   html_document:
     code_folding: hide
     collapsed: no
     df_print: paged
     toc: yes
     toc_depth: 3
-editor_options: 
+editor_options:
   chunk_output_type: inline
 bibliography: reference.bib
 vignette: >
-  %\VignetteIndexEntry{Introduction to the eCV package}
+  %\VignetteIndexEntry{Introduction to the eCV package} 
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -27,7 +30,8 @@ knitr::opts_chunk$set(collapse = TRUE,
 
 # Welcome!
 
-Thanks for using package eCV! This vignette provides a high-level introduction to the functionality and usage of eCV and related functions.
+Thanks for using package eCV! This vignette provides a high-level introduction to the functionality and usage of eCV and related functions. Please refer to @gonzalez-reymundez_ecv_2023 
+for more details about each implemented method.
 
 # Installation
 

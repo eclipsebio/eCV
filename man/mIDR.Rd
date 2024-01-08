@@ -67,7 +67,7 @@ p <- 0.7
 
 # Get meta local IDR scores.
 midr_out <- mIDR(x = out$sim_data, mu, sigma, rho, p)
-\dontrun{
+\donttest{
 library(tidyverse)
 out$sim_data \%>\%
   as.data.frame() \%>\%

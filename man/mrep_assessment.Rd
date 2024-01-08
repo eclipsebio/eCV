@@ -45,8 +45,6 @@ Any of the other methods are meant to be used when r >= 2. Both gIDR and mIDR
 reduce to traditional IDR if r = 2.
 }
 \examples{
-\dontrun{
-library(tidyverse)
 library(eCV)
 
 # Simulate data
@@ -73,18 +71,20 @@ params <- list(
 
 # Create a list to store results
 results <- NULL
-# Loop through methods and calculate reproducibility
-for (method in c("eCV", "gIDR", "mIDR")) {
-  results <- results \%>\% 
-  bind_rows( data.frame(value = 
-  mrep_assessment(x = out$sim_data, 
-  method = method,
-   param = params[[method]])$rep_index, 
-              Method = method,
-              group = out$sim_params$feature_group))
+methods <- c("eCV", "gIDR", "mIDR")
+for (method in methods) {
+  rep_index <- mrep_assessment(x = out$sim_data,
+                               method = method,
+                               param = params[[method]])$rep_index
+  new_rows <- data.frame(value = rep_index,
+                         Method = method,
+                         group = out$sim_params$feature_group)
+  results <- rbind(results, new_rows)
 }
 
 # Plot results
+\donttest{
+library(tidyverse)
 results \%>\% 
 mutate(group = ifelse(group == 1,"FALSE","TRUE")) \%>\%
 ggplot(aes(x=Method, y = value,fill=group)) + 

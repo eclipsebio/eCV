@@ -68,7 +68,7 @@
 #' # Show the results are the same.
 #' all.equal(gidr.out$est_param, idr.out$para)
 #' 
-#' \dontrun{
+#' \donttest{
 #' 
 #' library(tidyverse)
 #' # Plot results.

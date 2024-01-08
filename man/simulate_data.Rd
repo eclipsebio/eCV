@@ -53,7 +53,7 @@ addition  of  a  component  of  “reproducible noise” consisting of highly
 library(eCV)
 set.seed(42)
 out <- simulate_data(scenario = 1)
-\dontrun{
+\donttest{
 library(tidyverse)
 out$sim_data \%>\% as.data.frame() \%>\% 
 mutate(`Features group` = as.character(out$sim_params$feature_group)) \%>\%

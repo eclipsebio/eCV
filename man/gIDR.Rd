@@ -78,7 +78,7 @@ gidr.out <- gIDR(x = out$sim_data, mu, sigma, rho, p)
 # Show the results are the same.
 all.equal(gidr.out$est_param, idr.out$para)
 
-\dontrun{
+\donttest{
 
 library(tidyverse)
 # Plot results.

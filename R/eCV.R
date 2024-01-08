@@ -43,7 +43,7 @@
 #' # Run eCV
 #' ecv_out <- eCV(x = out$sim_data, max.ite = 100)
 #' 
-#' \dontrun{
+#' \donttest{
 #' # Plot results.
 #' library(tidyverse)
 #' 
