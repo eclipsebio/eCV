@@ -1,9 +1,6 @@
 ---
 title: "Introduction to the eCV package"
 output:
-  pdf_document:
-    toc: yes
-    toc_depth: '3'
   html_document:
     code_folding: hide
     collapsed: no
@@ -24,7 +21,7 @@ vignette: >
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(collapse = TRUE,
-                      comment = NA)
+                      comment = FALSE)
 ```
 
 
@@ -35,11 +32,10 @@ for more details about each implemented method.
 
 # Installation
 
-To install the development version from GitHub, please do
+To install, please do
 
 ```{r, eval = FALSE}
-# install.packages("remotes")
-remotes::install_github("eclipsebio/eCV")
+install.packages("eCV")
 ```
 
 # Load package eCV

@@ -30,7 +30,6 @@
 #' \item \emph{\strong{post_prob:}} Posterior probability values.
 #' }
 #' @import stats
-#' @importFrom MatrixGenerics rowSds
 #' @importFrom mvtnorm rmvnorm
 #' @importFrom future plan
 #' @export 
@@ -72,7 +71,8 @@ eCV <- function(x, max.ite = 1e4, n_threads = 1) {
   
   # Get observed eCV.
   omic_feat_means <- rowMeans(x, na.rm = TRUE)
-  omic_feat_sd2 <- MatrixGenerics::rowSds(x)^2
+  omic_feat_sd2 <- apply(X = x, MARGIN = 1, FUN = stats::var, na.rm = TRUE)
+
   ecv <- ifelse(test = omic_feat_means == 0, 
                 yes = omic_feat_sd2,  # Avoid Inf when dividing by zero.
                 no = abs(omic_feat_sd2 - omic_feat_means^2) / omic_feat_means)

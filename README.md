@@ -15,8 +15,6 @@ for analyzing high-throughput  data in genomics  and other omics fields.
 
 ## [Preprint](https://www.biorxiv.org/content/10.1101/2023.12.18.572208v3)
 
-## [Vignette](https://github.com/eclipsebio/eCV/blob/main/inst/eCV_vignette.pdf)
-
 ## Install from CRAN.
 
 ```
@@ -38,3 +36,8 @@ install_github("eclipsebio/eCV")
 library("eCV")
 ```
 
+## Vignette.
+
+```
+utils::vignette("eCV_vignette")
+```
