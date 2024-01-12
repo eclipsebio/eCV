@@ -79,6 +79,6 @@ ecv_null_sampler <- function(i, n, mu, Sigma, ecv)
 {
   z <- mvtnorm::rmvnorm(n, mean = mu, sigma = Sigma)
   m <- rowMeans(z)
-  row_sd <- apply(X = z, MARGIN = 1, FUN = sd, na.rm = TRUE)
+  row_sd <- apply(X = z, MARGIN = 1, FUN = stats::sd, na.rm = TRUE)
   ecv < abs(row_sd^2 - m^2) / m
 }
