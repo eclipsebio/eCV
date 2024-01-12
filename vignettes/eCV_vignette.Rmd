@@ -1,9 +1,6 @@
 ---
 title: "Introduction to the eCV package"
 output:
-  pdf_document:
-    toc: yes
-    toc_depth: '3'
   html_document:
     code_folding: hide
     collapsed: no

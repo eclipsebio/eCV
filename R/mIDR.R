@@ -132,7 +132,7 @@ mIDR <-
     }
 
     # Get meta local IDR score.
-    idr <- 1 - MatrixGenerics::rowProds(x = 1 - idr_score_pairs)
+    idr <- 1 - apply(X = 1 - idr_score_pairs, MARGIN = 1, FUN = prod)
 
     # Estimate expected meta-IDR.
     o <- order(idr)

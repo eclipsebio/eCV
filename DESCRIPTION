@@ -1,6 +1,6 @@
 Package: eCV
 Title: Enhanced Coefficient of Variation and IDR Extensions for Reproducibility Assessment
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: c(person("Agustin", "Gonzalez-Reymundez", email = "agustin.gonrey@eclipsebio.com", role = c("aut", "cre")))
 Description: 
     Reproducibility assessment is essential in extracting reliable scientific 
