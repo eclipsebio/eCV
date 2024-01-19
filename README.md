@@ -6,6 +6,7 @@
 [![cran checks](https://badges.cranchecks.info/worst/eCV.svg)](https://cran.r-project.org/web/checks/check_results_eCV.html)
 ![Downloads](http://cranlogs.r-pkg.org/badges/eCV?color=green) 
 ![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/eCV?color=green)
+[![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Feclipsebio%2FeCV&label=views&countColor=%23263759)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Feclipsebio%2FeCV)
 
 This package provides extensions and alternative methods to measure the
 reproducibility  of  omic  data  with an arbitrary number of replicates. 
