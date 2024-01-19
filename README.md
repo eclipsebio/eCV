@@ -1,12 +1,13 @@
 <img align="top" style="margin-left: 1px; margin-bottom: 1px; margin-right: 1px; margin-top: 10px" src="inst/images/eCV_logo.png" width="150" height="150"/>
 
+
 # Enhanced Coefficient of Variation and IDR Extensions for Reproducibility Assessment
 
 [![CRAN status](https://www.r-pkg.org/badges/version/eCV?color=orange)](https://CRAN.R-project.org/package=eCV)
 [![cran checks](https://badges.cranchecks.info/worst/eCV.svg)](https://cran.r-project.org/web/checks/check_results_eCV.html)
 ![Downloads](http://cranlogs.r-pkg.org/badges/eCV?color=green) 
 ![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/eCV?color=green)
-[![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Feclipsebio%2FeCV&label=views&countColor=%23263759)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Feclipsebio%2FeCV)
+![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Feclipsebio%2FeCV&label=views&countColor=%23263759&style=flat)
 
 This package provides extensions and alternative methods to measure the
 reproducibility  of  omic  data  with an arbitrary number of replicates. 
